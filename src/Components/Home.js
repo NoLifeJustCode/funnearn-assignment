@@ -27,7 +27,7 @@ class Home extends React.Component{
     checkPermission=()=>{
         for(let permission of access)
         {
-            if(permission==this.props.user.permission)
+            if(permission===this.props.user.permission)
             return true;
         }
         return false;
@@ -66,7 +66,7 @@ class Home extends React.Component{
      */
     decrement=(fruit)=>{
         try{
-            if(this.peek(this.state.basket).name!=fruit)
+            if(this.peek(this.state.basket).name!==fruit)
                  throw new Error('Top fruit doesn\'t match');
              let fruits=this.state.fruits.slice();
              let basket=this.state.basket.slice();

@@ -33,10 +33,10 @@ class Login extends React.Component{
     submitLogin=(e)=>{
             try{
             let username=this.usernameRef.current.value;
-            if(username=='')
+            if(username==='')
                 throw new Error('username cannot be blank')
             let password=this.passwordRef.current.value;
-            if(password=='')
+            if(password==='')
                 throw new Error('pasword cannot be blank')
             let user=this.findUser(username,password)
             this.props.successfullLogin(user);

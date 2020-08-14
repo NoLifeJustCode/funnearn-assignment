@@ -6,7 +6,7 @@ import { Route, Redirect } from 'react-router-dom';
  * @param {*} param0 
  */
 const PublicRoute = ({component: Component, ...rest}) => {
-    console.log("rest",rest)
+   
     return (
 
         // Show the component only when the user is not logged in
