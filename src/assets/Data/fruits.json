@@ -1,0 +1,23 @@
+[
+    {
+        "name":"APPLE",
+        "view":"APPLE",
+        "qty":10,
+        "MAX":10
+
+    },
+    {
+        "name":"ORANGE",
+        "view":"ORANGE",
+        "qty":10,
+        "MAX":10
+
+    },
+    {
+        "name":"GRAPES",
+        "view":"GRAPES",
+        "qty":10,
+        "MAX":10
+
+    }
+]

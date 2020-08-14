@@ -1,0 +1,12 @@
+{
+    "user1":{
+        "name":"Admin",
+        "permission":"admin",
+        "password":"Admin"
+    },
+    "user2":{
+        "name":"MyName",
+        "permission":"none",
+        "password":"test"
+    }
+}
