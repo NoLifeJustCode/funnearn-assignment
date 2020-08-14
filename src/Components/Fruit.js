@@ -1,8 +1,16 @@
 import React from 'react';
 import { flash } from '../helper/notification';
-
+/**
+ * Individual fruit item 
+ * validate interaction 
+ * @param {*} props 
+ */
 function Fruit(props){
     const {fruit}=props;
+    /**
+     * add fruit to basked if possible else throw a error stating not possible
+     * @param {*} e 
+     */
     let increment=(e)=>{
         e.preventDefault();
         e.stopPropagation();
@@ -15,6 +23,10 @@ function Fruit(props){
             props.increment(fruit.name);
         }
     }
+    /**
+     * Remvoe the fruit from the basket if valid
+     * @param {*} e 
+     */
     let decrement=(e)=>{
         e.preventDefault();
         e.stopPropagation();

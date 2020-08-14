@@ -1,8 +1,11 @@
 import React from 'react';
-
+/**
+ * Basket stack containg the list of fruits 
+ */
 class Basket extends React.Component{
     render(){
-        const {basket}=this.props;
+        let {basket}=this.props;
+        basket.reverse();
         return(
             <div className="basket-container">
                     {

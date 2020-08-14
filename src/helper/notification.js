@@ -1,5 +1,5 @@
 import Noty from 'noty'
-// flast notification using noty
+// flash notification using noty
 function flash(text){
 let n=new Noty({
     text,

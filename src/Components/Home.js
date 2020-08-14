@@ -2,8 +2,14 @@ import React from 'react';
 import Fruit from './Fruit'
 import Basket from './Basket'
 import { flash } from '../helper/notification';
+// retrive fruits data
 const fruits=require('../assets/Data/fruits.json')
+// list of user permission allowed to interact
 const access=['admin']
+/**
+ * setup the Item list and the Basket stack space
+ * Validate user access to allow interaction and validate interaction
+ */
 class Home extends React.Component{
     constructor(props){
         super(props);
@@ -15,6 +21,9 @@ class Home extends React.Component{
                 basket:[]
         }
     }
+    /**
+     * check if user is authorized to interact
+     */
     checkPermission=()=>{
         for(let permission of access)
         {
@@ -23,12 +32,19 @@ class Home extends React.Component{
         }
         return false;
     }
+    /**
+     * retreive the element on top
+     * @param {*} arr 
+     */
     peek(arr){
         let len=arr.length;
         if(len<=0)
             throw new Error('Empty basket');
         return arr[len-1];
     }
+    /**
+     * add fruit to basket if possible
+     */
     increment=(fruit)=>{
             let fruits=this.state.fruits.slice();
             let basket=this.state.basket.slice();
@@ -45,7 +61,9 @@ class Home extends React.Component{
             })
         
     }
-
+    /**
+     * Remove fruit from basket is it is the top fruit
+     */
     decrement=(fruit)=>{
         try{
             if(this.peek(this.state.basket).name!=fruit)
