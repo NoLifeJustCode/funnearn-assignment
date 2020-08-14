@@ -50,7 +50,11 @@ code {
 }
 h3.heading{
   text-align: center;
+  text-transform: uppercase;
   
+}
+.border-bottom{
+  border-bottom: 1px solid black;
 }
 .whiteText{
   color: white;

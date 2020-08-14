@@ -8,6 +8,7 @@ class Basket extends React.Component{
         basket.reverse();
         return(
             <div className="basket-container">
+                   <h3 className="heading "> Basket</h3>
                     {
                         basket.map((fruit,index)=>{
                                 return(

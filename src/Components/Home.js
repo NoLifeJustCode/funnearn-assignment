@@ -90,8 +90,11 @@ class Home extends React.Component{
         
         
         return(
+            
             <div className="home-container">
+                    
                     <div className="fruit-container">
+                    <h3 className="heading ">All Fruits</h3>
                         {
                             fruits.map((item,index)=>{
                                 return <Fruit fruit={item} key={index} increment={this.increment} decrement={this.decrement} permission={this.permission}/>
